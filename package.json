@@ -12,7 +12,8 @@
     "styled-components": "^3.3.2",
     "truffle": "^4.1.11",
     "truffle-hdwallet-provider": "0.0.5",
-    "web3": "^1.0.0-beta.34"
+    "web3": "^1.0.0-beta.34",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.8.1",
@@ -21,10 +22,13 @@
   "scripts": {
     "start": "parcel app/index.html",
     "test": "truffle test",
-    "lint": "solium -d ."
+    "lint": "solium -d .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "alias": {
     "react": "preact-compat",
     "react-dom": "preact-compat"
-  }
+  },
+  "snyk": true
 }
